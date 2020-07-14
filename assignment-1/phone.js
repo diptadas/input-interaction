@@ -41,22 +41,17 @@ $('.add-contact').click(
 		var phone = $('#phone').val();
 		var email = $('#email').val();
 		var alertText = "Name: " + name + ", Email: " + email + ", Phone: " + phone;
-		clearContactForm();
 		alert(alertText);
 	}
 );
 
 $('.clear-contact').click(
 	function () {
-		clearContactForm();
+		$('#name').val('');
+		$('#email').val('');
+		$('#phone').val('');
 	}
 );
-
-function clearContactForm() {
-	$('#name').val('');
-	$('#email').val('');
-	$('#phone').val('');
-}
 
 function searchContact() {
 	var input = document.getElementById("contact-search");
