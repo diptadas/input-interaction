@@ -119,29 +119,28 @@
                     <fieldset>
                         <div class="pure-control-group">
                             <label for="name">Name</label>
-                            <input id="name" type="text" placeholder="John Smith">
+                            <input id="name" type="text" placeholder="John Smith" required="">
                         </div>
                         <div class="pure-control-group">
                             <label for="phone">Phone Number</label>
-                            <input id="phone" type="text" placeholder="123-456-7890">
+                            <input id="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12"
+                                placeholder="123-456-7890" required="">
                         </div>
                         <div class="pure-control-group">
                             <label for="email">Email Address</label>
-                            <input id="email" type="email" placeholder="jsmith@example.com">
+                            <input id="email" type="email" placeholder="jsmith@example.com" required="">
                         </div>
-
+                        <div class="pure-g pure-control-group">
+                            <div class="pure-u-1-2">
+                                <button type="submit" class="pure-button button-action add-contact">Add
+                                    Contact</button>
+                            </div>
+                            <div class="pure-u-1-2">
+                                <button type="submit" class="pure-button button-action clear-contact">Clear</button>
+                            </div>
+                        </div>
                     </fieldset>
-
                 </form>
-                <div class="pure-g ">
-                    <div class="pure-u-1-2">
-                        <button class="pure-button button-action add-contact">Add
-                            Contact</button>
-                    </div>
-                    <div class="pure-u-1-2">
-                        <button class="pure-button button-action clear-contact">Clear</button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
