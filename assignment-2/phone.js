@@ -1,3 +1,5 @@
+var currentTab = 1;
+
 $(document).ready(function () {
 	$("#tab1").show();
 	$("#tab2").hide();
@@ -97,6 +99,7 @@ $('.gesture-pad').mouseup(
 	function (e) {
 		upX = e.pageX;
 		upY = e.pageY;
+
 		if ((upX == downX) && (upY == downY)) $("#gesture-output").val("Mouse Up");
 		else if (Math.abs(upX - downX) > Math.abs(upY - downY)) {
 			console.log("horizontal swipe");
@@ -114,5 +117,25 @@ $('.gesture-pad').mouseup(
 $('.gesture-pad').mouseleave(
 	function () {
 		$("#gesture-output").val("Ready");
+	}
+);
+
+$('.tab-nav').mousedown(
+	function (e) {
+		tabDownX = e.pageX;
+	}
+);
+
+$('.tab-nav').mouseup(
+	function (e) {
+		tabUpX = e.pageX;
+
+		if (tabUpX < tabDownX && currentTab > 1) currentTab--;
+		else if (tabUpX > tabDownX && currentTab < 4) currentTab++;
+
+		if (currentTab == 1) $("#tab1-btn").click();
+		else if (currentTab == 2) $("#tab2-btn").click();
+		else if (currentTab == 3) $("#tab3-btn").click();
+		else if (currentTab == 4) $("#tab4-btn").click();
 	}
 );
