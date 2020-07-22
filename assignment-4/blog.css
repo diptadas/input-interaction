@@ -81,7 +81,13 @@ td {
 }
 
 #div-submit {
+  margin-top: 10px;
   text-align: center;
+}
+
+#submit {
+  background-color: brown;
+  color: white;
 }
 
 .hidden {
@@ -91,6 +97,7 @@ td {
 #submit-alert {
   border-radius: 4px;
   padding: 5px;
+  margin-top: 10px;
   background-color: brown;
   color: white;
 }
