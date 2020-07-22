@@ -1,0 +1,108 @@
+body {
+  background-color: AntiqueWhite;
+}
+
+.page {
+  max-width: 720px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.menu {
+  text-align: center;
+  font-family: 'Rowdies', cursive;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.pure-menu-item {
+  height: 50pt;
+}
+
+.pure-menu-item a {
+  color: brown;
+}
+
+p {
+  text-align: justify;
+  margin: 5px 0 15px;
+  font-family: 'Slabo', serif;
+  font-size: large;
+}
+
+.section h1 {
+  text-align: center;
+  font-family: 'Rowdies', cursive;
+  font-size: xx-large;
+}
+
+.subsection h2 {
+  font-family: 'Rowdies', cursive;
+  font-size: x-large;
+}
+
+.comment h2 {
+  font-family: 'Rowdies', cursive;
+  font-size: x-large;
+  color: brown;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#table-spec {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table-spec th,
+td {
+  border: 1px solid gray;
+  text-align: left;
+  font-family: 'Slabo', serif;
+  font-size: large;
+  padding: 15px;
+}
+
+#comment-form input {
+  width: 100%;
+}
+
+#comment-form textarea {
+  width: 100%;
+  height: 100px;
+}
+
+#comment-form label {
+  font-family: 'Slabo', serif;
+  font-size: large;
+}
+
+#div-submit {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#submit-alert {
+  border-radius: 4px;
+  padding: 5px;
+  background-color: brown;
+  color: white;
+}
+
+#submit-alert p {
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+}
+
+hr {
+  margin-top: 30px;
+}
