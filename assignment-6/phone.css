@@ -97,3 +97,13 @@
 .tab-nav:hover {
   background-color: #ddd;
 }
+
+#tab4 {
+  overflow: scroll;
+  height: 400px;
+}
+
+#tab4 p {
+  text-align: justify;
+  margin: 15px
+}

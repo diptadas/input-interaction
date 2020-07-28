@@ -105,3 +105,13 @@
 .tab-nav:hover {
   background-color: yellow;
 }
+
+#tab4 {
+  overflow: scroll;
+  height: 550px;
+}
+
+#tab4 p {
+  text-align: justify;
+  margin: 20px;
+}
