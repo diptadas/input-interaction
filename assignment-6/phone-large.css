@@ -1,0 +1,107 @@
+.container {
+  position: relative;
+  top: 5%;
+  height: 750px;
+  width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  box-shadow: 1.5px 7.5px 7.5px 7.5px grey;
+  font-size: 150%;
+}
+
+.tab-bar {
+  overflow: hidden;
+  padding: 10px;
+  background-color: white;
+}
+
+.tab-bar button {
+  background-color: inherit;
+  width: 100%;
+  border: 1.5px solid black;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.tab-content {
+  display: flex;
+  align-items: center;
+}
+
+.single-tab {
+  width: 100%;
+}
+
+#dial-value {
+  width: 94%;
+}
+
+.button-digit {
+  border-radius: 4px;
+  padding: 10px;
+  width: 80%;
+  background: white;
+  font-weight: bold;
+}
+
+.pure-button:hover {
+  background-color: yellow;
+}
+
+.button-action {
+  border-radius: 4px;
+  padding: 10px;
+  width: 86%;
+  background: white;
+  font-weight: bold;
+}
+
+#contact-search {
+  width: 94%;
+}
+
+.contact-list-btn {
+  width: 94%;
+}
+
+#contact-list {
+  list-style-type: none;
+  overflow: scroll;
+  height: 320px;
+  padding: 0;
+  margin: 15px;
+}
+
+#contact-list li a {
+  border: 1.5px solid black;
+  background-color: white;
+  padding: 15px;
+  margin: 3px;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+#contact-list li a:hover:not(.header) {
+  background-color: yellow;
+}
+
+.tab-nav {
+  position: absolute;
+  height: 45px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tab-nav:hover {
+  background-color: yellow;
+}
