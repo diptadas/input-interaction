@@ -27,3 +27,11 @@ label {
 }
 
 .settings-btn.select { background: yellow; color: black;}
+
+table {
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
