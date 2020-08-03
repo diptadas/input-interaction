@@ -6,7 +6,8 @@ buttonOrder = ["#button7","#button8","#button9","#buttonDivide","#button4","#but
 // calling this will de-select anything currently selected
 function selectItem(name) {
 	$("button").removeClass("cursor");
-	$(name).addClass("cursor")
+	$(name).addClass("cursor");
+	read(name.replace("#button", ""));
 }
 
 // gets the currently selected item, and returns its #id
@@ -86,19 +87,70 @@ function clickSelectedItem() {
 	whichButton = getSelectedItem();
 	if (whichButton != null) {
 		$(whichButton).click();
+		beep();
 	}
 }
 
 // this function responds to user key presses
 // you'll rewrite this to control your interface using some number of keys
 $(document).keypress(function(event) {
-	if (event.key == "a") {
-		alert("You pressed the 'a' key!")	
-	} else if (event.key == "b") {
-		alert("You pressed the 'b' key!")
+	if (!oneButton && (event.key == "f" || event.key == "F")) {
+		selectNext();	
+	} else if (event.key == "j" || event.key == "J") {
+		clickSelectedItem();
 	}
 })
 
+function read(msg) {
+	if(sound) {
+		window.speechSynthesis.speak(new SpeechSynthesisUtterance(msg));
+	}
+}
+
+function beep() {
+	if(sound) {
+		new Audio('http://www.soundjay.com/button/beep-07.wav').play();
+	}	
+}
+
+var oneButton = true;
+var sound = false;
+
+$(document).ready(function () {
+	selectNext();
+	$("#one-btn").click();
+});
+
+setInterval(function() {
+	if(oneButton) {
+		selectNext();
+	} 
+}, 2000);
+
+$("#one-btn").click(function(event) {
+	oneButton = true;
+	$('#one-btn').addClass("select");
+	$('#two-btn').removeClass("select");
+	read("one button");
+})
+
+$("#two-btn").click(function(event) {
+	oneButton = false;
+	$('#two-btn').addClass("select");
+	$('#one-btn').removeClass("select");
+	read("two button");
+})
+
+
+$("#sound-btn").click(function(event) {
+	sound = !sound;
+	if(sound) {
+		$('#sound-btn').addClass("select");
+		read("sound on");
+	} else {
+		$('#sound-btn').removeClass("select");
+	}
+})
 
 /* calculator stuff below here */
 // for operations, we'll save + - / *

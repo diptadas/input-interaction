@@ -21,6 +21,9 @@ label {
 }
 
 #settings {
-	border: 1px solid black;
-	padding: 10px;
+	width: 462px;
+	text-align: center;
+	margin-top: 20px;
 }
+
+.settings-btn.select { background: yellow; color: black;}

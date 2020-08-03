@@ -37,13 +37,42 @@
 				<button id="buttonSubtract" class="calcButton row4 col4 function">-</button>
 			</div>
 		</div>
+		<div id="settings">
+			<button class="settings-btn" id="one-btn">ONE button</button>
+			<button class="settings-btn" id="two-btn">TWO button</button>
+			<button class="settings-btn" id="sound-btn">Sound</button>
+		</div>
 		<div id="comments">
-			<h2>About this app</h2>
-			<p>Include information here about your app.</p>
+			<h1>About this App</h1>
+
+			<h2>Instructions</h2>
 			<ul>
-				<li>Instructions for using the app</li>
-				<li>Test results</li>
-				<li>Anything else you have tried out</li>
+				<li><b>One Button:</b> To click the selected calculator button (yellow colored) press the <b>J</b> key. The cursor will automatically move to the button after two seconds of interval.</li>
+				<li><b>Two Button:</b>: To move the cursor to the next calculator button press the <b>F</b> key and to click the selected button press the <b>J</b> key.</li>
+				<li><b>Sound:</b> When sound is on, the application will read out the selected calculator button whenever cursor moves. Besides, a beep sound will be played when any button is clicked.</li>
+			</ul>
+
+			<h2>Test Setup</h2>
+			<p>We tested one-button (1 & 2 seconds intervals) and two-button mode using hand, elbow, and foot. For each setting, users where given the following five equations in a paper sheet:
+			<ol type="1">
+				<li>219+354/89-68</li>
+				<li>28*435*85+50-7</li>
+				<li>387-45*76+500</li>
+				<li>555+999/333*111</li>
+				<li>789+321-456*0</li>
+			</ol>
+			</p>
+
+			<h2>Average Test Result</h2>
+
+			<h2>Summary</h2>
+			<ul>
+				<li>The two-button mode works best while operating using hand.</li>
+				<li>One-button mode with one second interval works best while operating using foot and elbow. However, errors are less observed with two seconds interval.</li>
+				<li>For repeated keys in equation 3, users preferred two seconds interval which allowed them to click a button multiple times before the cursor moves to key button</li>
+				<li>In all scenarios, users preferred the sound which helped them to focus on the keyboard and paper sheet instead of staring at the display.</li>
+				<li>In two-button mode, <b>F</b>  and <b>J</b> keys have little bumps in most keyboards which helped the users to quickly identify the buttons.</li>
+				<li>We allowed both uppercase (<b>F, J</b>)  and lowercase (<b>f, j</b>) keys to ignore any accidental caps-lock presses.</li>
 			</ul>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
